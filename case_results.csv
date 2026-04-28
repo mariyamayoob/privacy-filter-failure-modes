@@ -1,0 +1,41 @@
+﻿case_id,category,should_redact,raw_result,cleaned_result,raw_span_count,cleaned_span_count,overlaps_removed,expected_text,raw_output,cleaned_output
+1,obfuscated_email,true,TP,TP,2,1,1,john dot smith at example dot com,Please follow up with[private_email][private_email] before EOD.,Please follow up with[private_email] before EOD.
+2,spaced_phone,true,FN,FN,0,0,0,7 0 4 . 5 5 5 . 0 1 9 8,Reach him at 7 0 4 . 5 5 5 . 0 1 9 8 after the meeting.,Reach him at 7 0 4 . 5 5 5 . 0 1 9 8 after the meeting.
+3,ambiguous_safe,false,TN,TN,0,0,0,,The May report shows growth in the Jordan segment across Paris region.,The May report shows growth in the Jordan segment across Paris region.
+4,enterprise_id_emp,true,FN,FN,0,0,0,EMP-10293,Employee EMP-10293 escalated the issue yesterday.,Employee EMP-10293 escalated the issue yesterday.
+5,enterprise_id_case,true,TP,TP,1,1,0,CASE-778812,Case CASE[private_address]778812 was reopened by support.,Case CASE[private_address]778812 was reopened by support.
+6,api_key,true,TP,TP,2,1,1,sk_live_4eC39HqLyjWDarjtT1zdp7dc,The API key[secret][secret] was pasted into logs.,The API key[secret] was pasted into logs.
+7,jwt_token,true,TP,TP,2,1,1,eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9,Authorization: Bearer[secret][secret] was visible.,Authorization: Bearer[secret] was visible.
+8,masked_email,true,TP,TP,2,1,1,s****@company.com,The email looked like[private_email][private_email] in the ticket.,The email looked like[private_email] in the ticket.
+9,safe_technical,false,TN,TN,0,0,0,,The model uses Gaussian assumptions and Bayesian inference.,The model uses Gaussian assumptions and Bayesian inference.
+10,person_name,true,TP,TP,2,1,1,Mariyam Ayoob,[private_person][private_person] confirmed the final review.,[private_person] confirmed the final review.
+11,spelled_phone,true,FN,FN,0,0,0,two four six two eight eight seven three eight zero,Her number is two four six two eight eight seven three eight zero.,Her number is two four six two eight eight seven three eight zero.
+12,spelled_out_phone_with_O_as_zero,true,TP,TP,3,2,1,two four O two eight eight seven three eight O,Her number is[account_number] four[account_number][account_number].,Her number is[account_number] four[account_number].
+13,medical_person,true,TP,TP,2,1,1,Sarah Malik,Patient[private_person][private_person] reported dizziness.,Patient[private_person] reported dizziness.
+14,medical_phone,true,TP,TP,2,1,1,704-555-0198,Patient asked for callback at [private_phone][private_phone].,Patient asked for callback at [private_phone].
+15,medical_mrn,true,TP,TP,2,1,1,998231,[account_number][account_number] was referenced in the discharge note.,[account_number] was referenced in the discharge note.
+16,medical_safe,false,TN,TN,0,0,0,,The patient reported mild nausea after taking medication.,The patient reported mild nausea after taking medication.
+17,call_transcript_account,true,TP,TP,2,1,1,AC-88921,Caller mentioned account[account_number][account_number] needs reset.,Caller mentioned account[account_number] needs reset.
+18,call_transcript_email,true,TP,TP,2,1,1,maria underscore lee at example dot org,Customer spelled email as[private_email][private_email],Customer spelled email as[private_email]
+19,call_safe_device,false,TN,TN,0,0,0,,The customer said the Apple device failed during setup.,The customer said the Apple device failed during setup.
+20,address,true,TP,TP,3,1,2,"123 Lakeview Drive, Charlotte, NC 28202",Ship replacement to [private_address][private_address][private_address].,Ship replacement to [private_address].
+21,ip_address,true,FN,FN,0,0,0,192.168.1.44,Login came from IP 192.168.1.44 during the failed session.,Login came from IP 192.168.1.44 during the failed session.
+22,database_secret,true,TP,TP,2,2,0,postgres://admin:Pass123@10.1.2.3:5432/prod,DB_CONN=postgres://admin:Pass123@10[private_url]2[private_url]3:5432/prod appeared in the error log.,DB_CONN=postgres://admin:Pass123@10[private_url]2[private_url]3:5432/prod appeared in the error log.
+23,credit_card_spaced,true,FN,FN,0,0,0,4 2 4 2 4 2 4 2 4 2 4 2 4 2 4 2,The card number was 4 2 4 2 4 2 4 2 4 2 4 2 4 2 4 2.,The card number was 4 2 4 2 4 2 4 2 4 2 4 2 4 2 4 2.
+24,credit_card,true,TP,TP,2,1,1,371449635398431,credit card# [account_number][account_number],credit card# [account_number]
+25,credit_card,true,FN,FN,0,0,0,371449635398431,card# is 371449635398431,card# is 371449635398431
+26,partial_digits,true,FN,FN,0,0,0,0198,Only the last four digits 0198 were visible in the note.,Only the last four digits 0198 were visible in the note.
+27,partial_digits,true,TP,TP,2,1,1,0198,[private_address][private_address] were visible in the note.,[private_address] were visible in the note.
+28,initial_lastname,true,TP,TP,2,1,1,J. Malik,Spoke with[private_person][private_person] about the billing issue.,Spoke with[private_person] about the billing issue.
+29,ocr_noise_name,true,TP,TP,2,1,1,S@r@h M@l!k,C@ll[private_email][private_email] for confirmation.,C@ll[private_email] for confirmation.
+30,ocr_noise_phone,true,TP,TP,2,1,1,704-555-O198,Reach at [private_phone][private_phone] for confirmation.,Reach at [private_phone] for confirmation.
+31,hr_manager,true,TP,TP,2,1,1,Priya Shah,Manager[private_person][private_person] approved leave request.,Manager[private_person] approved leave request.
+32,recruiting_case,true,FN,FN,0,0,0,REQ-4491,Requisition REQ-4491 is ready for review.,Requisition REQ-4491 is ready for review.
+33,sales_contract,true,TP,TP,3,3,0,CNTR-2024-09-XY,Contract[account_number]TR-202[account_number]-09[account_number]XY is ready for signature.,Contract[account_number]TR-202[account_number]-09[account_number]XY is ready for signature.
+34,obfuscated_email,true,TP,TP,2,1,1,john dot smith at example dot com,Please contact[private_email][private_email].,Please contact[private_email].
+35,address,true,TP,TP,3,1,2,"123 Lakeview Drive, Charlotte, NC 28202",Ship replacement to [private_address][private_address][private_address].,Ship replacement to [private_address].
+36,ocr_name,true,TP,TP,2,1,1,S@r@h M@l!k,C@ll[private_email][private_email] for confirmation.,C@ll[private_email] for confirmation.
+37,phone,true,TP,TP,2,1,1,704-555-O198,Reach at [private_phone][private_phone] for confirmation.,Reach at [private_phone] for confirmation.
+38,secret,true,TP,TP,2,1,1,sk_test_12345,The API key[secret][secret] was accidentally pasted.,The API key[secret] was accidentally pasted.
+39,masked_email,true,TP,TP,2,1,1,s****@company.com,The email looked like[private_email][private_email] in the ticket.,The email looked like[private_email] in the ticket.
+40,name_with_initial,true,TP,TP,2,1,1,J. Malik,Spoke with[private_person][private_person] about the billing issue.,Spoke with[private_person] about the billing issue.

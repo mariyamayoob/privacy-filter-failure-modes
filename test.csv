@@ -1,0 +1,41 @@
+case_id,category,text,expected_label,expected_text,should_redact
+001,obfuscated_email,Please follow up with john dot smith at example dot com before EOD.,EMAIL,john dot smith at example dot com,TRUE
+002,spaced_phone,Reach him at 7 0 4 . 5 5 5 . 0 1 9 8 after the meeting.,PHONE,7 0 4 . 5 5 5 . 0 1 9 8,TRUE
+003,ambiguous_safe,The May report shows growth in the Jordan segment across Paris region.,NONE,,FALSE
+004,enterprise_id_emp,Employee EMP-10293 escalated the issue yesterday.,EMPLOYEE_ID,EMP-10293,TRUE
+005,enterprise_id_case,Case CASE-778812 was reopened by support.,INTERNAL_CASE_ID,CASE-778812,TRUE
+006,api_key,The API key sk_live_4eC39HqLyjWDarjtT1zdp7dc was pasted into logs.,API_KEY,sk_live_4eC39HqLyjWDarjtT1zdp7dc,TRUE
+007,jwt_token,Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9 was visible.,OTHER_SECRET,eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9,TRUE
+008,masked_email,The email looked like s****@company.com in the ticket.,EMAIL,s****@company.com,TRUE
+009,safe_technical,The model uses Gaussian assumptions and Bayesian inference.,NONE,,FALSE
+010,person_name,Mariyam Ayoob confirmed the final review.,PERSON,Mariyam Ayoob,TRUE
+011,spelled_phone,Her number is two four six two eight eight seven three eight zero.,PHONE,two four six two eight eight seven three eight zero,TRUE
+012,spelled_out_phone_with_O_as_zero,Her number is two four O two eight eight seven three eight O.,PHONE,two four O two eight eight seven three eight O,TRUE
+013,medical_person,Patient Sarah Malik reported dizziness.,PERSON,Sarah Malik,TRUE
+014,medical_phone,Patient asked for callback at 704-555-0198.,PHONE,704-555-0198,TRUE
+015,medical_mrn,MRN 998231 was referenced in the discharge note.,ACCOUNT_ID,998231,TRUE
+016,medical_safe,The patient reported mild nausea after taking medication.,NONE,,FALSE
+017,call_transcript_account,Caller mentioned account AC-88921 needs reset.,ACCOUNT_ID,AC-88921,TRUE
+018,call_transcript_email,Customer spelled email as maria underscore lee at example dot org.,EMAIL,maria underscore lee at example dot org,TRUE
+019,call_safe_device,The customer said the Apple device failed during setup.,NONE,,FALSE
+020,address,"Ship replacement to 123 Lakeview Drive, Charlotte, NC 28202.",ADDRESS,"123 Lakeview Drive, Charlotte, NC 28202",TRUE
+021,ip_address,Login came from IP 192.168.1.44 during the failed session.,IP_ADDRESS,192.168.1.44,TRUE
+022,database_secret,DB_CONN=postgres://admin:Pass123@10.1.2.3:5432/prod appeared in the error log.,OTHER_SECRET,postgres://admin:Pass123@10.1.2.3:5432/prod,TRUE
+023,credit_card_spaced,The card number was 4 2 4 2 4 2 4 2 4 2 4 2 4 2 4 2.,CREDIT_CARD,4 2 4 2 4 2 4 2 4 2 4 2 4 2 4 2,TRUE
+024,credit_card,credit card# 371449635398431,CREDIT_CARD,371449635398431,TRUE
+025,credit_card,card# is 371449635398431,CREDIT_CARD,371449635398431,TRUE
+026,partial_digits,Only the last four digits 0198 were visible in the note.,PHONE,0198,TRUE
+027,partial_digits,The PIN 0198 were visible in the note.,PIN,0198,TRUE
+028,initial_lastname,Spoke with J. Malik about the billing issue.,PERSON,J. Malik,TRUE
+029,ocr_noise_name,C@ll S@r@h M@l!k for confirmation.,PERSON,S@r@h M@l!k,TRUE
+030,ocr_noise_phone,Reach at 704-555-O198 for confirmation.,PHONE,704-555-O198,TRUE
+031,hr_manager,Manager Priya Shah approved leave request.,PERSON,Priya Shah,TRUE
+032,recruiting_case,Requisition REQ-4491 is ready for review.,INTERNAL_CASE_ID,REQ-4491,TRUE
+033,sales_contract,Contract CNTR-2024-09-XY is ready for signature.,INTERNAL_CASE_ID,CNTR-2024-09-XY,TRUE
+034,obfuscated_email,Please contact john dot smith at example dot com.,EMAIL,john dot smith at example dot com,TRUE
+035,address,"Ship replacement to 123 Lakeview Drive, Charlotte, NC 28202.",ADDRESS,"123 Lakeview Drive, Charlotte, NC 28202",TRUE
+036,ocr_name,C@ll S@r@h M@l!k for confirmation.,PERSON,S@r@h M@l!k,TRUE
+037,phone,Reach at 704-555-O198 for confirmation.,PHONE,704-555-O198,TRUE
+038,secret,The API key sk_test_12345 was accidentally pasted.,API_KEY,sk_test_12345,TRUE
+039,masked_email,The email looked like s****@company.com in the ticket.,EMAIL,s****@company.com,TRUE
+040,name_with_initial,Spoke with J. Malik about the billing issue.,PERSON,J. Malik,TRUE

@@ -1,0 +1,9 @@
+﻿case_id,category,should_redact,raw_result,cleaned_result,raw_span_count,cleaned_span_count,overlaps_removed,expected_text,raw_output,cleaned_output,original_text
+2,spaced_phone,true,FN,FN,0,0,0,7 0 4 . 5 5 5 . 0 1 9 8,Reach him at 7 0 4 . 5 5 5 . 0 1 9 8 after the meeting.,Reach him at 7 0 4 . 5 5 5 . 0 1 9 8 after the meeting.,Reach him at 7 0 4 . 5 5 5 . 0 1 9 8 after the meeting.
+4,enterprise_id_emp,true,FN,FN,0,0,0,EMP-10293,Employee EMP-10293 escalated the issue yesterday.,Employee EMP-10293 escalated the issue yesterday.,Employee EMP-10293 escalated the issue yesterday.
+11,spelled_phone,true,FN,FN,0,0,0,two four six two eight eight seven three eight zero,Her number is two four six two eight eight seven three eight zero.,Her number is two four six two eight eight seven three eight zero.,Her number is two four six two eight eight seven three eight zero.
+21,ip_address,true,FN,FN,0,0,0,192.168.1.44,Login came from IP 192.168.1.44 during the failed session.,Login came from IP 192.168.1.44 during the failed session.,Login came from IP 192.168.1.44 during the failed session.
+23,credit_card_spaced,true,FN,FN,0,0,0,4 2 4 2 4 2 4 2 4 2 4 2 4 2 4 2,The card number was 4 2 4 2 4 2 4 2 4 2 4 2 4 2 4 2.,The card number was 4 2 4 2 4 2 4 2 4 2 4 2 4 2 4 2.,The card number was 4 2 4 2 4 2 4 2 4 2 4 2 4 2 4 2.
+25,credit_card,true,FN,FN,0,0,0,371449635398431,card# is 371449635398431,card# is 371449635398431,card# is 371449635398431
+26,partial_digits,true,FN,FN,0,0,0,0198,Only the last four digits 0198 were visible in the note.,Only the last four digits 0198 were visible in the note.,Only the last four digits 0198 were visible in the note.
+32,recruiting_case,true,FN,FN,0,0,0,REQ-4491,Requisition REQ-4491 is ready for review.,Requisition REQ-4491 is ready for review.,Requisition REQ-4491 is ready for review.
